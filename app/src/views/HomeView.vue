@@ -1,0 +1,7 @@
+<template>
+  <div class="home">
+    <h1>main page</h1>
+  </div>
+</template>
+
+
