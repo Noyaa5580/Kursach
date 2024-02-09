@@ -2,8 +2,11 @@
   <div class="head">
     <div class="header_string">
       <div class="city_button">
-        <div class="city"><img src="../assets/icons/map.png" alt=""><p>Москва</p></div>
-        <div class="delivery_time"></div>
+        <div class="city">
+          <img src="../assets/icons/map.png" alt="" />
+          <p>Москва</p>
+        </div>
+        <div class="delivery_time">{{ this.delivery }}</div>
       </div>
       <div><img src="../assets/logo.svg" alt="" /></div>
       <div class="menu_icons"></div>
@@ -31,8 +34,16 @@
   justify-content: space-between;
 }
 
-.header_string{
-  
+.header_string {
+  display: flex;
+}
+
+.city {
+  display: flex;
+  gap: 4px;
+  font-family: "Montserrat alternates";
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .link {
@@ -59,6 +70,7 @@ export default {
         { name: "Контакты", link: "/contacts" },
         { name: "О нас", link: "/about" },
       ],
+      delivery: "2",
     };
   },
   methods: {},
