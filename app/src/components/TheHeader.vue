@@ -54,6 +54,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 }
 .menu {
   display: flex;
@@ -123,6 +124,7 @@
   justify-content: center;
   transition:all 0.7s ease-in-out;
   animation: alternate;
+  z-index: 1;
 }
 
 .user_form {

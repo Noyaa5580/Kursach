@@ -1,7 +1,15 @@
 <template>
   <div>
-    <h1>main page</h1>
+    <BannerSlider/>
   </div>
 </template>
+<script>
+import BannerSlider from '../components/BannerSlider.vue'
+export default {
+  components:{
+    BannerSlider
+  }
+}
+</script>
 
 
