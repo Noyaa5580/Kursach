@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 @click="check()">GOVNO</h1>
-        <div v-for="item in new_products" :key="item"><h2>{{item.volumeInfo.title}}</h2></div>
+        <div v-for="item in new_products" :key="item"><h2>{{item.volumeInfo.title}}</h2><h2>{{item.volumeInfo.authors[0]}}</h2></div>
     </div>
 </template>
 <script>
@@ -28,4 +28,3 @@ export default {
     }
 }
 </script>
-// console.log(response.data.items)
