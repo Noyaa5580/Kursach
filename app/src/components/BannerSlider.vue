@@ -2,12 +2,7 @@
   <div>
     <div class="slider">
       <div class="slider_line" id="slider">
-        <img
-          src="../assets/banners/1920/slide1.svg"
-          alt=""
-          srcset=""
-          @click="edit_slider()"
-        />
+        <img src="../assets/banners/1920/slide1.svg" alt="" srcset=""/>
         <img src="../assets/banners/1920/slide2.svg" alt="" srcset="" />
         <img src="../assets/banners/1920/slide3.svg" alt="" srcset="" />
         <img src="../assets/banners/1920/slide4.svg" alt="" srcset="" />
