@@ -3,6 +3,7 @@
     <header><TheHeader/></header>
     <main><router-view/></main>
     <footer></footer>
+    check
   </div>
 </template>
 
