@@ -3,7 +3,6 @@
     <header><TheHeader/></header>
     <main><router-view/></main>
     <footer></footer>
-    <h1></h1>
   </div>
 </template>
 
