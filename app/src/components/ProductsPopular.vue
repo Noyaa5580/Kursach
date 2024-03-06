@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ProductCard v-for="item in new_products" :key="item" :name="item.name"></ProductCard>
+    <ProductCard v-for="item in new_products" :key="item" :name="item.name" :price="item.price" :author="item.author" :img_link="item.img_link"></ProductCard>
   </div>
 </template>
 <script>

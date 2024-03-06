@@ -206,7 +206,6 @@ export default {
       urls: [
         { name: "Главная", link: "/" },
         { name: "Каталог", link: "/catalog" },
-        { name: "Новости", link: "/news" },
         { name: "Контакты", link: "/contacts" },
         { name: "О нас", link: "/about" },
       ],
