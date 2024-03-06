@@ -1,5 +1,6 @@
 <template>
   <div class="slider">
+    <p class="slider_name">Популярные новинки</p>
     <div class="slider_line">
       <ProductCard
         v-for="item in new_products"
@@ -15,9 +16,18 @@
 <style scoped>
 .slider{
     width: 100%;
-    height: 640px;
+    height: 680px;
     overflow: hidden;
 }
+
+.slider_name{
+    margin: 32px 0px 24px 68px;
+    font-family: 'Montserrat Alternates';
+    font-weight: 600;
+font-size: 28px;
+color: #000;
+}
+
 .slider_line{
     display: flex;
     width: 300%;
