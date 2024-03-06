@@ -217,11 +217,13 @@ export default {
       let user_modal = document.getElementById('user_modal');
       user_modal.style.opacity = '100%';
       user_modal.style.visibility = 'visible';
+      document.body.style.overflow = "hidden";
     },
     close_user_modal() {
       let user_modal = document.getElementById('user_modal');
       user_modal.style.opacity = '0%';
       user_modal.style.visibility = 'hidden';
+      document.body.style.overflow = "";
     },
     open_search_modal() {},
     close_search_modal() {},
