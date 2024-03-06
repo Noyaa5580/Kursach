@@ -71,6 +71,7 @@ img {
   font-family: "Nunito", sans-serif;
   font-size: 24px;
   margin-left: 182px;
+  cursor: pointer;
 }
 </style>
 <script>

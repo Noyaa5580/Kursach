@@ -1,17 +1,17 @@
 <template>
   <div>
     <BannerSlider/>
-    <ProductsPopular/>
+    <ProductsSliders/>
   </div>
 </template>
 <script>
 import BannerSlider from '../components/BannerSlider.vue'
-import ProductsPopular from '../components/ProductsPopular.vue'
+import ProductsSliders from '../components/ProductsSliders.vue'
 
 export default {
   components:{
     BannerSlider,
-    ProductsPopular
+    ProductsSliders
   }
 }
 </script>
