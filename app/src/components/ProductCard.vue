@@ -13,10 +13,13 @@
 </template>
 <style scoped>
 .card {
-  width: 326px;
-  height: 530px;
+  width: 350px;
+  height: 570px;
   display: flex;
   flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.03);
+  background: #f7f7f7;
 }
 .img_container {
   width: 326px;
@@ -25,34 +28,35 @@
   justify-content: center;
   align-items: center;
   background-color: white;
+  margin-left: 12px;
+  margin-top: 12px;
 }
 img {
   width: 246px;
   height: 326px;
 }
 
-
-
-.product_info{
-    font-family: 'Nunito',sans-serif;
+.product_info {
+  font-family: "Nunito", sans-serif;
+  margin-left: 12px;
 }
-.product_name{
-    font-size: 24px;
-    margin-top: 16px;
-    margin-bottom: 8px;
+.product_name {
+  font-size: 24px;
+  margin-top: 16px;
+  margin-bottom: 8px;
 }
 
-.product_price{
-    font-style: italic;
-font-weight: 700;
-font-size: 24px;
+.product_price {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
 }
-.product_author{
-font-weight: 500;
-font-size: 16px;
-color: #a9a9a9;
-margin-top: 8px;
-margin-bottom: 16px;
+.product_author {
+  font-weight: 500;
+  font-size: 16px;
+  color: #a9a9a9;
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
 .buy_button {
   display: flex;
@@ -66,7 +70,7 @@ margin-bottom: 16px;
   justify-content: center;
   font-family: "Nunito", sans-serif;
   font-size: 24px;
-  margin-left: 170px;
+  margin-left: 182px;
 }
 </style>
 <script>
