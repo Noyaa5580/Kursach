@@ -41,7 +41,7 @@ img {
   margin-left: 12px;
 }
 .product_name {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 16px;
   margin-bottom: 8px;
 }
@@ -49,7 +49,7 @@ img {
 .product_price {
   font-style: italic;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
 }
 .product_author {
   font-weight: 500;
