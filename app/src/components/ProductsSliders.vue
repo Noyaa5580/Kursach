@@ -209,7 +209,7 @@ export default {
     slider_right2() {
       let slider = document.getElementById("slider_line2");
       this.offset2 -= 100;
-      slider.style.left = this.offset1 + "%";
+      slider.style.left = this.offset2 + "%";
       if (this.offset2 < -200) {
         this.offset2 = 0;
         slider.style.left = this.offset2 + "%";

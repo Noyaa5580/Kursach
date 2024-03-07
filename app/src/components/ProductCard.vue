@@ -41,7 +41,7 @@ img {
   margin-left: 12px;
 }
 .product_name {
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 16px;
   margin-bottom: 8px;
 }
