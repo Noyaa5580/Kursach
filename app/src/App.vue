@@ -2,7 +2,7 @@
   <div>
     <header><TheHeader/></header>
     <main><router-view/></main>
-    <footer></footer>
+    <footer><TheFooter/></footer>
 
   </div>
 </template>
@@ -15,10 +15,13 @@
 </style>
 
 <script>
+import TheFooter from './components/TheFooter.vue';
 import TheHeader from "./components/TheHeader.vue";
+
 export default {
   components: {
     TheHeader,
+    TheFooter
   },
 };
 </script>
