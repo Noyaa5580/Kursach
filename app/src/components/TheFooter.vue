@@ -45,13 +45,26 @@
         </p>
         <p>2023-2024</p>
       </div>
+      <div class="social_networks">
+        <img src="../assets/icons/vk.svg" />
+        <img src="../assets/icons/telega.svg"/>
+        <img src="../assets/icons/github.svg" />
+        <img src="../assets/icons/yotube.svg" />
+      </div>
+      <div class="payments">
+        <img src="../assets/payments/Bitcoin.svg" alt="">
+        <img src="../assets/payments/MNP.svg" alt="">
+        <img src="../assets/payments/Paypal.svg" alt="">
+        <img src="../assets/payments/WebMoney.svg" alt="">
+        <img src="../assets/payments/YandexPay.svg" alt="">
+      </div>
     </div>
   </div>
 </template>
 <style scoped>
 .footer {
   width: 100%;
-  height: 410px;
+  height: 430px;
   background-color: #f7f7f7;
 }
 
@@ -123,20 +136,38 @@
   height: 40px;
 }
 
-.down_line{
+.down_line {
   display: flex;
   justify-content: space-between;
 }
 
-.rights{
+.rights {
   margin-left: 68px;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   font-size: 20px;
 }
 .copy_right {
   display: flex;
   align-items: flex-end;
   margin-bottom: 4px;
+}
+
+.social_networks{
+  display: flex;
+  gap: 12px ;
+}
+
+.social_networks>*{
+  cursor: pointer;
+}
+
+.payments{
+  margin-right: 68px;
+  display: flex;
+  gap: 12px;
+}
+.payments>*{
+  cursor: pointer;
 }
 </style>
 <script>
