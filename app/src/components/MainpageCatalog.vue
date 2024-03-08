@@ -76,6 +76,7 @@
 </style>
 <script>
 import CategoryCard from "./CategoryCard.vue";
+
 export default {
   components: {
     CategoryCard,
@@ -87,37 +88,38 @@ export default {
           name: "Скидки",
           top: -35,
           right: 40,
-          img: "/img/sales.0ae38c07.svg",
+          // img: "/img/sales.0ae38c07.svg",
+          img: require("../assets/catalog_icons/sales.svg")
         },
         {
           name: "Саморазвитие",
           top: 28,
           right: -19,
-          img: "/img/personal_development.1fe619e2.svg",
+          img: require("../assets/catalog_icons/personal_development.svg")
         },
         {
           name: "Научпоп",
           top: 30,
           right: -35,
-          img: "/img/scincepop.0dbbab63.svg",
+          img: require("../assets/catalog_icons/scincepop.svg")
         },
         {
           name: "Детям",
           top: 30,
           right: -15,
-          img: "/img/kids.50ce9257.svg",
+          img: require("../assets/catalog_icons/kids.svg")
         },
         {
           name: "Психология",
           top: 50,
           right: -43,
-          img: "/img/psychology.6df1b057.svg",
+          img: require("../assets/catalog_icons/psychology.svg")
         },
         {
           name: "Манга",
           top: -7,
           right: 0,
-          img: "/img/manga.94038c35.svg",
+          img: require("../assets/catalog_icons/manga.svg")
         },
       ],
       categories2: [
@@ -125,40 +127,41 @@ export default {
           name: "Ежедневники",
           top: -30,
           right: 40,
-          img: "/img/everyday_book.02d58631.svg",
+          img: require("../assets/catalog_icons/everyday_book.svg")
         },
         {
           name: "Бизнес",
           top: -30,
           right: -3,
-          img: "/img/buisness.2f7bdf59.svg",
+          img: require("../assets/catalog_icons/buisness.svg")
         },
         {
           name: "Художественная литература",
           top: 40,
           right: 35,
-          img: "/img/art_litr.cb88b5a0.svg",
+          img: require("../assets/catalog_icons/art_litr.svg")
         },
         {
           name: "Экономика",
           top: -25,
           right: -40,
-          img: "/img/economy.c449e9df.svg",
+          img: require("../assets/catalog_icons/economy.svg")
         },
         {
           name: "Исскуство",
           top: 45,
           right: 0,
-          img: "/img/art.ccaff680.svg",
+          img: require("../assets/catalog_icons/art.svg"),
         },
         {
           name: "Классическая литература",
           top: 50,
           right: 30,
-          img: "/img/classic.fa024828.svg",
+          img: require("../assets/catalog_icons/classic.svg")
         },
       ],
     };
   },
+
 };
 </script>
