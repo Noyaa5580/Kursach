@@ -8,7 +8,7 @@
       <p class="product_price">{{ price }} ₽</p>
       <p class="product_author">{{ author }}</p>
     </div>
-    <div class="buy_button">Купить</div>
+    <div @click="openProduct(id)" class="buy_button" >Купить</div>
   </div>
 </template>
 <style scoped>
@@ -81,6 +81,12 @@ export default {
     price: Number,
     author: String,
     img_link: String,
+    id: String,
   },
+  methods:{
+    openProduct(id){
+      this.$router.push('/product?id=' + id)
+    }
+  }
 };
 </script>

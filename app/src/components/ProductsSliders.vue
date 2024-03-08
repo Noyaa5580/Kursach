@@ -24,6 +24,7 @@
           :price="item.price"
           :author="item.author"
           :img_link="item.img_link"
+          :id="item.id"
         ></ProductCard>
       </div>
     </div>
@@ -51,6 +52,7 @@
           :price="item.price"
           :author="item.author"
           :img_link="item.img_link"
+          :id="item.id"
         ></ProductCard>
       </div>
     </div>
@@ -78,6 +80,7 @@
           :price="item.price"
           :author="item.author"
           :img_link="item.img_link"
+          :id="item.id"
         ></ProductCard>
       </div>
     </div>
