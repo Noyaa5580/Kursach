@@ -18,16 +18,22 @@
         </div>
       </div>
       <div class="buy_block">
-        <p>{{product_info.price}}</p>
+        <p class="price">{{ product_info.price }} ₽</p>
         <div class="buy_button">Добавить в корзину</div>
-        <div class="delivery"><p>Москва</p>
-        <p>Доставка от 2 дней</p></div>
+        <div class="delivery">
+          <p class="city">Москва</p>
+          <p class="dil_time">Доставка от 2 дней</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+
+.page_content{
+  margin: 0px 68px;
+}
 .back_link {
   font-family: "Montserrat Alternates";
   font-weight: 400;
@@ -53,37 +59,91 @@
   color: #000;
 }
 
-.specs{
+.product_specifications{
+  margin-left: 70px;
+}
+
+.specs {
   display: flex;
   flex-direction: column;
-gap: 12px;
-font-family: 'Nunito', sans-serif;
+  gap: 12px;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
-font-size: 20px;
-color: #ababab;
-margin-top: 24px;
+  font-size: 20px;
+  color: #ababab;
+  margin-top: 24px;
 }
 
-.specs_description{
-  font-family: 'Nunito', sans-serif;
+.specs_description {
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
-font-size: 20px;
-color: #ababab;
-margin-top: 18px;
-margin-bottom: 12px;
+  font-size: 20px;
+  color: #ababab;
+  margin-top: 18px;
+  margin-bottom: 12px;
 }
 
-.description{
-  font-family: 'Nunito';
+.description {
+  font-family: "Nunito";
   font-weight: 400;
-color: #000;
+  color: #000;
 }
 
-.description_text{
+.description_text {
   max-width: 650px;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 25px;
   text-align: justify;
+}
+
+.buy_block {
+  width: 250px;
+  height: 160px;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.03);
+  background: #f7f7f7;
+margin-left: 300px;
+}
+
+.buy_button {
+  border-radius: 12px;
+  width: 225px;
+  height: 38px;
+  background: #b5d43c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito";
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.price{
+  color: #000;
+  font-family: 'Montserrat Alternates';
+  font-size: 24px;
+  margin: 10px 0px 12px 12px;
+  font-weight: 600;
+}
+
+.delivery{
+  margin-top: 14px;
+  margin-left: 12px;
+}
+
+.city{
+  font-family: 'Montserrat alternates';
+  font-weight: 500;
+  font-size: 14;
+}
+
+.dil_time{
+  font-family: 'Nunito';
+  font-size: 12px;
+  color: #D6D6D6;
+  margin-top: 4px;
 }
 </style>
 
