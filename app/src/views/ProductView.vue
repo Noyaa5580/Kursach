@@ -19,19 +19,34 @@
       </div>
       <div class="buy_block">
         <p class="price">{{ product_info.price }} ₽</p>
-        <div class="buy_button">Добавить в корзину</div>
+        <div v-on:click="this.checkproducts()" class="buy_button">
+          Добавить в корзину
+        </div>
         <div class="delivery">
           <p class="city">Москва</p>
           <p class="dil_time">Доставка от 2 дней</p>
         </div>
       </div>
     </div>
+    <p class="see_label">Смотрите также</p>
+    <div class="see_more">
+      <div class="products_container">
+        <ProductCard
+          v-for="item in see_products"
+          :key="item"
+          :name="item.name"
+          :price="item.price"
+          :author="item.author"
+          :img_link="item.img_link"
+          :id="item.id"
+        ></ProductCard>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-
-.page_content{
+.page_content {
   margin: 0px 68px;
 }
 .back_link {
@@ -59,7 +74,7 @@
   color: #000;
 }
 
-.product_specifications{
+.product_specifications {
   margin-left: 70px;
 }
 
@@ -101,7 +116,7 @@
   height: 160px;
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.03);
   background: #f7f7f7;
-margin-left: 300px;
+  margin-left: 300px;
 }
 
 .buy_button {
@@ -120,48 +135,86 @@ margin-left: 300px;
   cursor: pointer;
 }
 
-.price{
+.price {
   color: #000;
-  font-family: 'Montserrat Alternates';
+  font-family: "Montserrat Alternates";
   font-size: 24px;
   margin: 10px 0px 12px 12px;
   font-weight: 600;
 }
 
-.delivery{
+.delivery {
   margin-top: 14px;
   margin-left: 12px;
 }
 
-.city{
-  font-family: 'Montserrat alternates';
+.city {
+  font-family: "Montserrat alternates";
   font-weight: 500;
   font-size: 14;
 }
 
-.dil_time{
-  font-family: 'Nunito';
+.dil_time {
+  font-family: "Nunito";
   font-size: 12px;
-  color: #D6D6D6;
+  color: #d6d6d6;
   margin-top: 4px;
+}
+
+.products_container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1500px;
+  gap: 24px;
+}
+
+.see_more{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.see_label {
+  font-family: "montserrat alternates";
+  font-weight: 600;
+  font-size: 28px;
+  color: #000;
+  margin: 24px 0px;
 }
 </style>
 
 <script>
 import axios from "axios";
+import ProductCard from "../components/ProductCard.vue";
 
 export default {
+  components: { ProductCard },
   data: function () {
     return {
       product_info: {},
+      see_products: [],
     };
   },
   methods: {
     router_back() {
       this.$router.go(-1);
     },
+    getProducts() {
+      let lim1 = Math.round(Math.random() * 18 - 0);
+      let lim2 = lim1 + 8;
+      axios
+        .get("http://localhost:3000/cathalog?_start=" + lim1 + "&_end=" + lim2)
+        .then((response) => (this.see_products = response.data))
+        .catch((error) => {
+          console.error("Ошибка при запросе к API:", error);
+        });
+    },
+    checkproducts() {
+      console.log(this.see_products);
+    },
   },
   mounted() {
+    this.getProducts();
     axios
       .get("http://localhost:3000/cathalog?id=" + this.$route.query.id)
       .then((response) => (this.product_info = response.data[0]))

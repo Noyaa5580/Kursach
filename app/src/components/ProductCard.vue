@@ -84,11 +84,10 @@ export default {
     id: String,
   },
   methods:{
-    openProduct(id){
+     openProduct(id){
       this.$router.push('/product?id=' + id)
     }
   }
 };
 </script>
 
-// http://localhost:3000/cathalog?_start=3&_end=9
