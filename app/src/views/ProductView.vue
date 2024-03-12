@@ -1,4 +1,4 @@
-<template>
+<template :key="id">
   <div class="page_content">
     <div @click="router_back()" class="back_link">
       <img src="../assets/icons/Chevron_Left_Duo.svg" alt="" />Назад
@@ -168,7 +168,7 @@
   gap: 24px;
 }
 
-.see_more{
+.see_more {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -221,6 +221,7 @@ export default {
       .catch((error) => {
         console.error("Ошибка при запросе к API:", error);
       });
+
   },
 };
 </script>

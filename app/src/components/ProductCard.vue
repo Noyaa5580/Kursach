@@ -15,6 +15,7 @@
 a{
   text-decoration: none;
 }
+
 .card {
   width: 350px;
   height: 570px;
@@ -87,8 +88,10 @@ export default {
     id: String,
   },
   methods:{
-
-  }
+    // openproduct(id){
+    //   this.$router.push('/product?id=' + id)
+    // }
+  },
 };
 </script>
 
