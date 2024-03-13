@@ -14,6 +14,20 @@
         <div class="pic"><img src="../assets/contacts.svg" /></div>
       </div>
     </div>
+<yandex-map
+    :settings="{
+      location: {
+        center: [37.673034, 55.874349,],
+        zoom: 18,
+      },
+    }"
+    height="50vh"
+  >
+    <yandex-map-default-scheme-layer :settings="{ theme: 'light' }" />
+    <yandex-map-controls :settings="{ position: 'right' }">
+      <yandex-map-zoom-control />
+    </yandex-map-controls>
+  </yandex-map>
   </div>
 </template>
 
@@ -84,10 +98,20 @@
   margin: 24px;
   background-color: black;
 }
+
 </style>
 
 <script>
+import {
+  YandexMap,
+
+  YandexMapDefaultSchemeLayer,
+
+} from "vue-yandex-maps";
 export default {
+  components:{
+    YandexMap, YandexMapDefaultSchemeLayer
+  },
   data: function () {
     return {
       contacts_array: [

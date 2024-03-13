@@ -13,7 +13,8 @@
     "lodash": "^4.17.21",
     "proxy": "^2.1.1",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vue-yandex-maps": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
