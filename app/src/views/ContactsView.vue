@@ -13,21 +13,36 @@
         <div class="border"></div>
         <div class="pic"><img src="../assets/contacts.svg" /></div>
       </div>
+      <form action="" class="contacts_form">
+        <p>Оставить заявку</p>
+        <input class="input_text" type="text" placeholder="Ф.И.О" />
+        <input class="input_text" type="text" placeholder="E-mail" />
+        <input
+          class="input_text"
+          type="text"
+          placeholder="Сообщение"
+          id="msg"
+        />
+        <input type="submit" value="Отправить" id="send_button" />
+      </form>
     </div>
-<yandex-map
-    :settings="{
-      location: {
-        center: [37.673034, 55.874349,],
-        zoom: 18,
-      },
-    }"
-    height="50vh"
-  >
-    <yandex-map-default-scheme-layer :settings="{ theme: 'light' }" />
-    <yandex-map-controls :settings="{ position: 'right' }">
-      <yandex-map-zoom-control />
-    </yandex-map-controls>
-  </yandex-map>
+
+    <yandex-map
+      :settings="{
+        location: {
+          center: [37.673034, 55.874349],
+          zoom: 18,
+        },
+      }"
+      height="50vh"
+      style="margin-top: 40px"
+    >
+      <yandex-map-default-scheme-layer :settings="{ theme: 'light' }" />
+      <yandex-map-default-features-layer />
+      <yandex-map-controls :settings="{ position: 'right' }">
+        <yandex-map-zoom-control />
+      </yandex-map-controls>
+    </yandex-map>
   </div>
 </template>
 
@@ -92,25 +107,88 @@
   font-size: 16px;
 }
 
-.border{
+.border {
   height: calc(100%-48px);
   width: 2px;
   margin: 24px;
   background-color: black;
 }
 
+.contacts_form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4px solid #000;
+  border-radius: 20px;
+  width: 667px;
+  height: 539px;
+}
+.contacts_form > p {
+  font-family: "Montserrat alternates";
+  font-weight: 500;
+  font-size: 24px;
+  color: #000;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.input_text {
+  margin-top: 32px;
+  width: 480px;
+  height: 60px;
+  border-radius: 8px;
+  border: 2px solid #b5d43c;
+  padding-left: 12px;
+  font-size: 20px;
+}
+
+.input_text::placeholder {
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat alternates";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.input_text:focus {
+  outline: none;
+}
+
+#msg {
+  min-height: 140px;
+  margin-bottom: 24px;
+}
+
+#send_button {
+  margin-left: 320px;
+  border-radius: 12px;
+  width: 180px;
+  height: 40px;
+  background-color: #d9ef81;
+  border: none;
+  color: white;
+   font-family: "Montserrat alternates";
+   font-size: 18px;
+   font-weight: 700;
+}
+#send_button:active{
+    width: 178px;
+  height: 38px;
+}
 </style>
 
 <script>
 import {
   YandexMap,
-
   YandexMapDefaultSchemeLayer,
-
+  YandexMapDefaultFeaturesLayer,
 } from "vue-yandex-maps";
 export default {
-  components:{
-    YandexMap, YandexMapDefaultSchemeLayer
+  components: {
+    YandexMap,
+    YandexMapDefaultSchemeLayer,
+
+    YandexMapDefaultFeaturesLayer,
   },
   data: function () {
     return {

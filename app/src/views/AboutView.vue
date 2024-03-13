@@ -26,9 +26,6 @@
         мир через магию литературы.
       </p>
     </div>
-    <div class="replies">
-      <div class="slider_replies"></div>
-    </div>
   </div>
 </template>
 
