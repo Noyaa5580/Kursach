@@ -1,6 +1,26 @@
 <template>
-  <div>
-    <ProductCard
+  <div class="content">
+    <div class="filters">
+      <p class="filters_name">Фильтры</p>
+      <p style="margin-top:16px">Цена</p>
+      <div class="price">
+        <p>от</p>
+        <input type="number" />
+        <p>от</p>
+        <input type="number" />
+      </div>
+      <div class="filter_border"></div>
+    </div>
+    <div class="products">
+      <div class="search_line">
+        <div class="sort_dropdown">
+          <p>По цене</p>
+          <img src="../assets/icons/Caret_Down_SM.svg" alt="" />
+        </div>
+        <div class="search"><input type="text" placeholder="Поиск" /></div>
+      </div>
+      <div class="cards">
+        <ProductCard
           v-for="item in books_array"
           :key="item"
           :name="item.name"
@@ -9,9 +29,87 @@
           :img_link="item.img_link"
           :id="item.id"
         ></ProductCard>
+      </div>
+    </div>
   </div>
 </template>
+
 <style>
+.content {
+  display: flex;
+  margin: 0px 68px;
+  width: calc(100% - 132px);
+}
+.cards {
+  display: flex;
+  width: 1100px;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 24px 0px;
+}
+
+.search_line {
+  display: flex;
+}
+
+.search > input {
+  border: 1px solid #a9a9a9;
+  border-radius: 6px;
+  padding-left: 12px;
+  width: 848px;
+  height: 24px;
+}
+input:focus {
+  outline: none;
+}
+
+.sort_dropdown {
+  display: flex;
+  font-family: "nunito";
+  justify-content: space-between;
+  border: 1px solid #a9a9a9;
+  border-radius: 6px;
+  width: 198px;
+  height: 24px;
+  margin-right: 24px;
+  cursor: pointer;
+  padding-left: 12px;
+}
+
+
+.filters{
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  font-family: 'Nunito';
+}
+
+.filter_border{
+  width: 206px;
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+  margin: 16px 0px;
+}
+.filters_name{
+  font-family: 'Montserrat Alternates';
+  font-weight: 500;
+font-size: 32px;
+text-align: center;
+color: #000;
+}
+.price{
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.price>input{
+  border: 1px solid #a9a9a9;
+border-radius: 12px;
+width: 48px;
+height: 20px;
+}
 </style>
 
 <script>
@@ -24,7 +122,6 @@ export default {
       books_array: [],
       catalogs_array: ["bestsellers", "popular", "new-products"],
       authors: [],
-
     };
   },
   methods: {
@@ -39,7 +136,7 @@ export default {
     },
   },
   mounted() {
-this.randomize_authors();
+    this.randomize_authors();
     axios
       .get("http://localhost:3000/cathalog")
       .then((response) => (this.books_array = response.data))
