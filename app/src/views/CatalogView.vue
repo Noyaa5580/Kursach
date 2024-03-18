@@ -2,14 +2,28 @@
   <div class="content">
     <div class="filters">
       <p class="filters_name">Фильтры</p>
-      <p style="margin-top:16px">Цена</p>
+      <p class="filter_category__name" style="margin-top: 16px">Цена</p>
       <div class="price">
         <p>от</p>
         <input type="number" />
-        <p>от</p>
+        <p>до</p>
         <input type="number" />
       </div>
       <div class="filter_border"></div>
+      <p class="filter_category__name">Автор</p>
+      <div class="search">
+        <input style="width: 170px" type="text" placeholder="Поиск" />
+      </div>
+      <label v-for="item in authors" :key="item"
+        ><input type="checkbox" name="" id="" class="checkbox" />{{
+          item.author
+        }}</label
+      >
+      <div class="filter_border"></div>
+      <p class="filter_category__name">Переплет</p>
+      <label
+        ><input type="checkbox" name="" id="" class="checkbox" />мягкий</label
+      >
     </div>
     <div class="products">
       <div class="search_line">
@@ -37,6 +51,8 @@
 <style>
 .content {
   display: flex;
+  width: 100%;
+  justify-content: center;
   margin: 0px 68px;
   width: calc(100% - 132px);
 }
@@ -76,39 +92,51 @@ input:focus {
   padding-left: 12px;
 }
 
-
-.filters{
+.filters {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: flex-start;
-  font-family: 'Nunito';
+  font-family: "Nunito";
+  width: 300px;
+  margin-left: 8px;
 }
 
-.filter_border{
+.filter_border {
   width: 206px;
   height: 2px;
   background-color: black;
   border-radius: 2px;
   margin: 16px 0px;
 }
-.filters_name{
-  font-family: 'Montserrat Alternates';
+.filters_name {
+  font-family: "Montserrat Alternates";
   font-weight: 500;
-font-size: 32px;
-text-align: center;
-color: #000;
+  font-size: 32px;
+  text-align: center;
+  color: #000;
 }
-.price{
+.price {
   display: flex;
   gap: 4px;
   margin-top: 8px;
 }
 
-.price>input{
+.price > input {
   border: 1px solid #a9a9a9;
-border-radius: 12px;
-width: 48px;
-height: 20px;
+  border-radius: 12px;
+  width: 48px;
+  height: 20px;
+}
+
+.filter_category__name {
+  font-size: 24px;
+}
+label {
+  font-size: 18px;
+  margin-top: 4px;
+}
+.checkbox {
+  margin-right: 4px;
 }
 </style>
 
