@@ -73,6 +73,41 @@
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  .category_line{
+    flex-direction: column;
+    gap: 12px ;
+  }
+  .categories{
+    align-items: center;
+  }
+  .catalog_line {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+  .catalog_line>p{
+  margin: 0px 24px;
+   min-width: 140px;
+  }
+.link_catalog{
+  width: 140px;
+    margin-right:  24px;
+    margin-left: 0px;
+}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .category_line{
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px){
+  .categories{
+    margin: 0px 32px;
+  }
+}
+
 </style>
 <script>
 import CategoryCard from "./CategoryCard.vue";

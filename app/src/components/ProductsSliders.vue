@@ -141,6 +141,27 @@
   width: 100%;
   transition: all ease-in-out 0.3s;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  .slider_line {
+    padding-left: 12px;
+    width: 900%;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .slider_line {
+    padding-left: 12px;
+    width: 500%;
+    gap: 40px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .slider_line {
+    padding-left: 12px;
+    gap: 120px;
+  }
+}
 </style>
 <script>
 import ProductCard from "./ProductCard.vue";
@@ -174,19 +195,65 @@ export default {
     slider_left1() {
       let slider = document.getElementById("slider_line1");
       this.offset1 += 100;
-      slider.style.left = this.offset1 + "%";
-      if (this.offset1 > 0) {
-        this.offset1 = -200;
+      if (window.innerWidth >= 320 && window.innerWidth <= 767) {
         slider.style.left = this.offset1 + "%";
+        if (this.offset1 > 0) {
+          this.offset1 = -800;
+          slider.style.left = this.offset1 + "%";
+        }
+      }
+      if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
+        slider.style.left = this.offset1 + "%";
+        if (this.offset1 > 0) {
+          this.offset1 = -400;
+          slider.style.left = this.offset1 + "%";
+        }
+      }
+      if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
+        slider.style.left = this.offset1 + "%";
+        if (this.offset1 > 0) {
+          this.offset1 = -300;
+          slider.style.left = this.offset1 + "%";
+        }
+      }
+      if (window.innerWidth > 1440) {
+        slider.style.left = this.offset1 + "%";
+        if (this.offset1 > 0) {
+          this.offset1 = -200;
+          slider.style.left = this.offset1 + "%";
+        }
       }
     },
     slider_right1() {
       let slider = document.getElementById("slider_line1");
       this.offset1 -= 100;
-      slider.style.left = this.offset1 + "%";
-      if (this.offset1 < -200) {
-        this.offset1 = 0;
+      if (window.innerWidth >= 320 && window.innerWidth <= 767) {
         slider.style.left = this.offset1 + "%";
+        if (this.offset1 < -800) {
+          this.offset1 = 0;
+          slider.style.left = this.offset1 + "%";
+        }
+      }
+      if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
+        slider.style.left = this.offset1 + "%";
+        if (this.offset1 < -400) {
+          this.offset1 = 0;
+          slider.style.left = this.offset1 + "%";
+        }
+      }
+      if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
+        slider.style.left = this.offset1 + "%";
+        if (this.offset1 < -300) {
+          this.offset1 = 0;
+          slider.style.left = this.offset1 + "%";
+        }
+      }
+      if (window.innerWidth > 1440) {
+        slider.style.left = this.offset1 + "%";
+        if (this.offset1 < -200) {
+          this.offset1 = 0;
+          slider.style.left = this.offset1 + "%";
+        }
       }
     },
     show_buttons2() {
@@ -203,19 +270,65 @@ export default {
     slider_left2() {
       let slider = document.getElementById("slider_line2");
       this.offset2 += 100;
-      slider.style.left = this.offset2 + "%";
-      if (this.offset2 > 0) {
-        this.offset2 = -200;
+      if (window.innerWidth >= 320 && window.innerWidth <= 767) {
+        slider.style.left = this.offset3 + "%";
+        if (this.offset2 > 0) {
+          this.offset2 = -800;
+          slider.style.left = this.offset2 + "%";
+        }
+      }
+      if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
+        slider.style.left = this.offset3 + "%";
+        if (this.offset2 > 0) {
+          this.offset2 = -300;
+          slider.style.left = this.offset2 + "%";
+        }
+      }
+      if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
         slider.style.left = this.offset2 + "%";
+        if (this.offset2 > 0) {
+          this.offset2 = -300;
+          slider.style.left = this.offset2 + "%";
+        }
+      }
+      if (window.innerWidth > 1440) {
+        slider.style.left = this.offset2 + "%";
+        if (this.offset2 > 0) {
+          this.offset2 = -200;
+          slider.style.left = this.offset2 + "%";
+        }
       }
     },
     slider_right2() {
       let slider = document.getElementById("slider_line2");
       this.offset2 -= 100;
-      slider.style.left = this.offset2 + "%";
-      if (this.offset2 < -200) {
-        this.offset2 = 0;
+      if (window.innerWidth >= 320 && window.innerWidth <= 767) {
         slider.style.left = this.offset2 + "%";
+        if (this.offset2 < -800) {
+          this.offset2 = 0;
+          slider.style.left = this.offset2 + "%";
+        }
+      }
+      if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
+        slider.style.left = this.offset2 + "%";
+        if (this.offset2 < -300) {
+          this.offset2 = 0;
+          slider.style.left = this.offset2 + "%";
+        }
+      }
+      if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
+        slider.style.left = this.offset2 + "%";
+        if (this.offset2 < -300) {
+          this.offset2 = 0;
+          slider.style.left = this.offset2 + "%";
+        }
+      }
+       if (window.innerWidth > 1440) {
+        slider.style.left = this.offset2 + "%";
+        if (this.offset2 < -200) {
+          this.offset2 = 0;
+          slider.style.left = this.offset2 + "%";
+        }
       }
     },
     show_buttons3() {
@@ -232,19 +345,65 @@ export default {
     slider_left3() {
       let slider = document.getElementById("slider_line3");
       this.offset3 += 100;
-      slider.style.left = this.offset3 + "%";
-      if (this.offset3 > 0) {
-        this.offset3 = -200;
+      if (window.innerWidth >= 320 && window.innerWidth <= 767) {
         slider.style.left = this.offset3 + "%";
+        if (this.offset3 > 0) {
+          this.offset3 = -800;
+          slider.style.left = this.offset3 + "%";
+        }
+      }
+      if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
+        slider.style.left = this.offset3 + "%";
+        if (this.offset3 > 0) {
+          this.offset3 = -300;
+          slider.style.left = this.offset3 + "%";
+        }
+      }
+      if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
+        slider.style.left = this.offset3 + "%";
+        if (this.offset3 > 0) {
+          this.offset3 = -300;
+          slider.style.left = this.offset3 + "%";
+        }
+      }
+      if (window.innerWidth > 1440) {
+        slider.style.left = this.offset3 + "%";
+        if (this.offset3 > 0) {
+          this.offset3 = -200;
+          slider.style.left = this.offset3 + "%";
+        }
       }
     },
     slider_right3() {
       let slider = document.getElementById("slider_line3");
       this.offset3 -= 100;
-      slider.style.left = this.offset3 + "%";
-      if (this.offset3 < -200) {
-        this.offset3 = 0;
+      if (window.innerWidth >= 320 && window.innerWidth <= 767) {
         slider.style.left = this.offset3 + "%";
+        if (this.offset3 < -800) {
+          this.offset3 = 0;
+          slider.style.left = this.offset3 + "%";
+        }
+      }
+      if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
+        slider.style.left = this.offset3 + "%";
+        if (this.offset3 < -300) {
+          this.offset3 = 0;
+          slider.style.left = this.offset23 + "%";
+        }
+      }
+      if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
+        slider.style.left = this.offset3 + "%";
+        if (this.offset3 < -300) {
+          this.offset3 = 0;
+          slider.style.left = this.offset3 + "%";
+        }
+      }
+            if (window.innerWidth > 1440) {
+        slider.style.left = this.offset3 + "%";
+        if (this.offset3 < -200) {
+          this.offset3 = 0;
+          slider.style.left = this.offset3 + "%";
+        }
       }
     },
   },

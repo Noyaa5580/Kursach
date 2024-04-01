@@ -2,19 +2,49 @@
   <div>
     <div class="slider">
       <div class="slider_line" id="slider">
-        <img src="../assets/banners/1920/slide1.svg" alt="" srcset=""/>
-        <img src="../assets/banners/1920/slide2.svg" alt="" srcset="" />
-        <img src="../assets/banners/1920/slide3.svg" alt="" srcset="" />
-        <img src="../assets/banners/1920/slide4.svg" alt="" srcset="" />
-        <img src="../assets/banners/1920/slide5.svg" alt="" srcset="" />
+        <div class="item">
+          <img src="../assets/banners/1920/slide1.svg" alt="" srcset="" />
+        </div>
+        <div class="item">
+          <img src="../assets/banners/1920/slide2.svg" alt="" srcset="" />
+        </div>
+        <div class="item">
+          <img src="../assets/banners/1920/slide3.svg" alt="" srcset="" />
+        </div>
+        <div class="item">
+          <img src="../assets/banners/1920/slide4.svg" alt="" srcset="" />
+        </div>
+        <div class="item">
+          <img src="../assets/banners/1920/slide5.svg" alt="" srcset="" />
+        </div>
       </div>
     </div>
     <div class="slide_buttons">
-      <div class="button_slider button_slider_active" id="buttonS_1" @click="this.edit_slider1()"></div>
-      <div class="button_slider" id="buttonS_2" @click="this.edit_slider2()"></div>
-      <div class="button_slider" id="buttonS_3" @click="this.edit_slider3()"></div>
-      <div class="button_slider" id="buttonS_4" @click="this.edit_slider4()"></div>
-      <div class="button_slider" id="buttonS_5" @click="this.edit_slider5()"></div>
+      <div
+        class="button_slider button_slider_active"
+        id="buttonS_1"
+        @click="this.edit_slider1()"
+      ></div>
+      <div
+        class="button_slider"
+        id="buttonS_2"
+        @click="this.edit_slider2()"
+      ></div>
+      <div
+        class="button_slider"
+        id="buttonS_3"
+        @click="this.edit_slider3()"
+      ></div>
+      <div
+        class="button_slider"
+        id="buttonS_4"
+        @click="this.edit_slider4()"
+      ></div>
+      <div
+        class="button_slider"
+        id="buttonS_5"
+        @click="this.edit_slider5()"
+      ></div>
     </div>
   </div>
 </template>
@@ -36,10 +66,12 @@
   transition: all ease-in-out 200ms;
 }
 
-img {
+.item {
   width: 100%;
   height: 639px;
 }
+
+.item>img{width: 100%; }
 
 .slide_buttons {
   margin-top: 24px;
@@ -60,6 +92,65 @@ img {
   border-radius: 12px !important;
   width: 30px;
   transition: all ease-in-out 50ms;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .slider {
+    height: 150px;
+  }
+
+  .slider_line {
+    height: 150px;
+    align-items: center;
+  }
+
+  .item{
+    height: 150px;
+  }
+
+  .item>img{
+    height: 150px;
+  }
+
+  .slide_buttons {
+    margin: 12px;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .slider {
+    height: 300px;
+  }
+
+  .slider_line {
+    height: 300px;
+    align-items: center;
+  }
+  .item{
+    height: 300px;
+  }
+  .item>img{
+    height: 300px;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1440px){
+    .slider {
+    height: 400px;
+  }
+
+  .slider_line {
+    height: 400px;
+    align-items: center;
+  }
+
+  .item{
+    height: 400px;
+  }
+  .item>img{
+    height: 400px;
+  }
 }
 </style>
 
@@ -137,8 +228,8 @@ export default {
       this.b3 = document.getElementById("buttonS_3");
       this.b4 = document.getElementById("buttonS_4");
       this.b5 = document.getElementById("buttonS_5");
-      let slider = document.getElementById('slider');
-      slider.style.right = '400%';
+      let slider = document.getElementById("slider");
+      slider.style.right = "400%";
       this.b5.classList.add("button_slider_active");
       this.b2.classList.remove("button_slider_active");
       this.b3.classList.remove("button_slider_active");

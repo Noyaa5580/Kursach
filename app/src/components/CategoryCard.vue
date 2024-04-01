@@ -35,6 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 6px;
 }
 .category_card > img {
   width: 100px;
@@ -55,9 +56,13 @@
 
 .category_name {
   font-family: "Montserrat Alternates";
-  font-size: 24px;
+  font-size: 18px;
   max-width: 230px;
   text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  
 }
 </style>
 <script>

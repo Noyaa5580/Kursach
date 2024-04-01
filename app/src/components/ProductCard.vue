@@ -32,8 +32,7 @@ a{
   justify-content: center;
   align-items: center;
   background-color: white;
-  margin-left: 12px;
-  margin-top: 12px;
+  margin: 12px;
 }
 img {
   width: 246px;
@@ -76,6 +75,22 @@ img {
   font-size: 24px;
   margin-left: 182px;
   cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .card{
+    width: 300px;
+    margin: 0px;
+  }
+
+  .img_container{
+    width: 280px;
+    margin: 4px;
+  }
+
+  .buy_button{
+    margin-left: 100px;
+  }
 }
 </style>
 <script>

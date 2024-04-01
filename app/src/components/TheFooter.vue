@@ -47,16 +47,16 @@
       </div>
       <div class="social_networks">
         <img src="../assets/icons/vk.svg" />
-        <img src="../assets/icons/telega.svg"/>
+        <img src="../assets/icons/telega.svg" />
         <img src="../assets/icons/github.svg" />
         <img src="../assets/icons/yotube.svg" />
       </div>
       <div class="payments">
-        <img src="../assets/payments/Bitcoin.svg" alt="">
-        <img src="../assets/payments/MNP.svg" alt="">
-        <img src="../assets/payments/Paypal.svg" alt="">
-        <img src="../assets/payments/WebMoney.svg" alt="">
-        <img src="../assets/payments/YandexPay.svg" alt="">
+        <img src="../assets/payments/Bitcoin.svg" alt="" />
+        <img src="../assets/payments/MNP.svg" alt="" />
+        <img src="../assets/payments/Paypal.svg" alt="" />
+        <img src="../assets/payments/WebMoney.svg" alt="" />
+        <img src="../assets/payments/YandexPay.svg" alt="" />
       </div>
     </div>
   </div>
@@ -152,22 +152,113 @@
   margin-bottom: 4px;
 }
 
-.social_networks{
+.social_networks {
   display: flex;
-  gap: 12px ;
+  gap: 12px;
 }
 
-.social_networks>*{
+.social_networks > * {
   cursor: pointer;
 }
 
-.payments{
+.payments {
   margin-right: 68px;
   display: flex;
   gap: 12px;
 }
-.payments>*{
+.payments > * {
   cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    height: 480px;
+  }
+  .info_block1 {
+    font-size: 10px;
+    margin-left: 4px;
+    height: 200px;
+    width: 200px;
+  }
+
+  .work_info {
+    margin: 6px 0px;
+  }
+
+  #logo1 {
+    width: 100px;
+  }
+
+  .info_block2 {
+    font-size: 12px;
+    height: 200px;
+    margin-top: 50px;
+    height: 120px;
+  }
+
+  #Partner {
+    font-size: 12px;
+  }
+
+  #distribution {
+    margin: 8px 0px;
+  }
+
+  #Law {
+    font-size: 12px;
+  }
+  .info_block3 {
+    margin-top: 40px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    margin-right: 4px;
+    height: 140px;
+  }
+
+  .law_info {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+  #user_agree {
+    margin-bottom: 8px;
+  }
+
+  .down_line {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .rights {
+    margin-left: 0px;
+  }
+
+  .payments {
+    margin-right: 0px;
+    gap: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .footer{
+    height: 480px;
+  }
+  .upper_line{
+    justify-content: center;
+    gap: 24px ;
+  }
+
+  .payments{
+    margin-right: 0px;
+    flex-wrap: wrap;
+  }
+
+  .down_line{
+        justify-content: center;
+    gap: 24px ;
+  }
 }
 </style>
 <script>
